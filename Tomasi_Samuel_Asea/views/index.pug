@@ -1,0 +1,68 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+  link(rel="stylesheet", href="/css/style.css")
+.container(id='main container')
+  #main.row
+    #logo.col-6
+      img(src='/images/1. Form on load.PNG' alt='logo')
+    #form.col-6
+      h2 Registration Form
+      form#myForm.form(onsubmit='return validateForm()' action='' method='POST')
+        label(for='firstName') First Name:
+        input#firstName.form-control.mb-3(type='text' name='firstName')
+        label(for='lastName') Last Name:
+        input#lastName.form-control.mb-3(type='text' name='lastName')
+        label(for='course') Course:
+        select#course.form-control(name='course' placeholder='choose')
+          
+          option(value='certificateInHealthScience') Cetificate in Health Science
+          option(value='certificateInAppliedTechnology') Cetificate in Applied Technology
+          option(value='bachelorOfInformationTechnology')
+            | Bachelor of Information Technology
+          option(value='bachelorInBusinessTechnology')
+            | Bachelor in Business Technology
+          option(value='masterOfPublicHealth') Master of Public Health
+        br
+        label(for='entryScheme') Entry Scheme:
+        select#entryScheme.form-control(name='entryScheme' placeholder='choose')
+        
+          option(value='aLevelCertificate')
+            | A-Level certificate
+          option(value='adultMatureLearning') Adult/Mature Learning
+          option(value='certificate') Certificate
+          option(value='diploma') Diploma
+          option(value='bachelors') Bachelors
+        br
+        label(for='intake') Intake:
+        select#intake.form-control(name='intake' placeholder='choose')
+          option(value='januaryIntake') January Intake
+          option(value='mayIntake') May Intake
+          option(value='augustIntake') August Intake
+        br
+        label(for='sponsorship') Sponsorship:
+        select#sponsorship.form-control(name='sponsorship' placeholder='choose')
+          option(value='private') Private
+          option(value='government') Government
+          option(value='bursary') Bursary 
+        br
+        label(for='gender') Gender:
+        br
+        .form-check.form-check-inline
+          input#genderMale.form-check-input(type='radio' name='gender' value='Male')
+          label.form-check-label(for='genderMale') Male
+        .form-check.form-check-inline
+          input#genderFemale.form-check-input(type='radio' name='gender' value='Female')
+          label.form-check-label(for='genderFemale') Female
+        br
+        br
+        label(for='dob') Date of Birth:
+        input#dob.form-control.mb-3(type='date' name='dob')
+        label(for='residence') Residence:
+        input#residence.form-control.mb-3(type='text' name='residence')
+        button.btn.btn-primary(type='submit') Submit
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+script (src='/js/style.js')

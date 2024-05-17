@@ -1,0 +1,32 @@
+
+body, input, button {
+    font-family: 'Agency FB', Tahoma, Arial, 'Calibri';
+}
+#main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+    border: 2px solid #000;
+}
+#logo img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#form {
+    /* border: 2px solid #000; */
+    padding: 20px;
+    /* border-radius: 10px; */
+    background-color: #f8f9fa;
+}
+.invalid {
+    border-color: #FF0000;
+}
+.valid {
+    border-color: #0C5F52;
+}
+.success {
+    border-color: #00B050;
+}
